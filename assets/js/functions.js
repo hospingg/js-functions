@@ -62,11 +62,13 @@ function findSquare(a, b, c = Math.PI){   //function declaration
 // воно просте (просте число ділитися без залишку тільки на себе і на
 // одиницю).
 
-function ifSimple(a){   //function declaration
-    if ((a%2!=0 && a%3!=0) || (a===2 || a===3) ){
-        return true
+function isSimple(a){   //function declaration
+    for (i=2; i<a; i++){
+        if (a % i===0){
+            return false
+        }
     }
-    return false
+    return true
 }
 
 let createItemCard = function(){ //function expression
